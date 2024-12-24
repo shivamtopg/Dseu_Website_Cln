@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff; /* Light blue background */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #e7f5ff; /* Light blue card */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 450px; /* Set a fixed height for all cards */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out; /* Card fade-in animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  transform: scale(1.01); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #002855;
+  text-align: center;
+}
+
+.card hr {
+  border: none;
+  border-top: 1px solid #d1d1d1; /* Light gray horizontal line */
+  margin: 20px 0;
+  width: 90%; /* Same width for all cards */
+  margin-left: auto;
+  margin-right: auto; /* Center the line */
+}
+
+.scrollable-content {
+  flex-grow: 1;
+  max-height: 300px; /* Limit the height for scrolling area */
+  margin-top: px; /* Add spacing to ensure it's beneath the <hr> */
+  overflow-y: hidden; /* Hide vertical overflow */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  position: relative;
+}
+
+.scrollable-content ul {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #4a4a4a;
+  animation: autoScroll 10s linear infinite; /* Infinite scroll animation */
+}
+
+.scrollable-content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  margin-left: 50px;
+  white-space: wrap; /* Prevent text from wrapping */
+}
+
+.card button {
+  width: 200px;
+  background-color: #002855; /* Dark blue */
+  color: gold; /* Gold text */
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  align-self: center; /* Center button horizontally */
+}
+
+.card button:hover {
+  transform: translateY(-5px); /* Move the button upwards */
+  box-shadow: 0 5px 15px rgba(0, 40, 85, 0.3); /* Add a subtle shadow effect */
+  background-color: #004080; /* Slightly lighter blue on hover */
+}
+
+/* Fade-in animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Infinite scroll animation for the list */
+@keyframes autoScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Custom scrollbar styling */
+.scrollable-content::-webkit-scrollbar {
+  width: 8px; /* Customize scrollbar width */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: #d1d1d1; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0; /* Slightly darker color on hover */
+}
