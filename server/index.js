@@ -33,6 +33,11 @@ const DiplomaSyllabus = require("./routes/academics/syllabus/diplomaSyllabus.js"
 const CertificateSyllabus = require("./routes/academics/syllabus/certificateCourse.js");
 const academicCalender = require("./routes/academics/academicCalender.js");
 
+const coursesDiploma = require("./routes/courses/diploma.js");
+const coursesUG = require("./routes/courses/UG/UG.js");
+const coursesBSC = require("./routes/courses/UG/BSC.js");
+const coursesCertificate = require("./routes/courses/certificateCourse.js");
+
 app.use("/api/", homeRoutes);
 //about us routes
 app.use("/api/aboutUs/memoir", aboutUsMemoir);
@@ -63,6 +68,12 @@ app.use("/api/academics/PGSyllabus", academicsSyllabus);
 app.use("/api/academics/diplomaSyllabus", academicsSyllabus);
 app.use("/api/academics/certificateSyllabus", academicsSyllabus);
 app.use("/api/academics/academicCalender", academicCalender);
+
+//courses routes
+app.use("/api/courses/diploma", coursesDiploma);
+app.use("/api/courses/UG", coursesUG);
+app.use("/api/courses/UG/BSC", coursesBSC);
+app.use("/api/courses/certificate", coursesCertificate);
 
 // Start Server
 const PORT = process.env.PORT || 5000;
