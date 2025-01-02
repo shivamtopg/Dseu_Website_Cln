@@ -1,5 +1,5 @@
 body {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background: #fff;
@@ -395,16 +395,181 @@ body {
   border-radius: 8px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Base styles */
+.app {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 50px;
+  gap: 30px;
+}
+
+/* Facilities Sidebar */
+.facilities {
+  flex: 0 0 300px; /* Fixed width, won't grow or shrink */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.facilities h3 {
+  margin-bottom: 10px;
+  color: black;
+  border-bottom: 2px solid #ddd;
+}
+
+.facilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.facilities li {
+  padding: 10px;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid transparent;
+  margin-bottom: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  border-bottom: 1px solid #ddd;
+}
+
+.facilities li:hover,
+.facilities li.active {
+  background-color: rgba(0, 92, 185, 0.4);
+  color: white;
+}
+
+/* Content Section */
+.content {
+  flex: 1; /* Takes remaining space */
+  min-height: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Title Styling */
+.header-title {
+  width: 100%;
+  position: relative;
+  font-size: 24px;
+  color: black;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.header-title::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: blue;
+}
+
+.header-title::after {
+  content: "";
+  position: absolute;
+  bottom: -3.5px;
+  left: 80px;
+  width: calc(100% - 80px);
+  height: 1px;
+  background-color: lightblue;
+}
+
+.facility-image {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.seminar-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.seminar-description::after {
+  content: '';
+  display: block;
+  height: 1px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .app {
+    margin: 0 20px;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .facilities {
+    flex: 0 0 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    margin: 15px;
+  }
+  
+  .facilities {
+    flex: none;
+    width: 100%;
+  }
+  
+  .content {
+    width: 100%;
+    min-height: 300px;
+  }
+  
+  .header-title {
+    font-size: 20px;
+  }
+  
+  .header-title::before {
+    width: 60px;
+  }
+  
+  .header-title::after {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app {
+    margin: 10px;
+  }
+  
+  .facilities {
+    padding: 8px;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .facility-image {
+    max-width: 100%;
+  }
+  
+  .seminar-description {
+    font-size: 14px;
+  }
+}
+
 
 @keyframes autoScroll {
   0% {
