@@ -44,7 +44,7 @@ const Card = () => {
           <div className="scrollable-content">
           <ul>
               {card.content.map((item, idx) => (
-                <li key={idx}>{item}</li>
+                <a href="#"><li key={idx}>{item}</li></a>
               ))}
             </ul>
           </div>
