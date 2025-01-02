@@ -6,6 +6,7 @@ import AboutGrid from "./components/AboutGrid";
 import NewsSection from "./components/NewsSection";
 import TabSection from "./components/TabSection";
 import Facilities from "./components/Facilities";
+import Entrepreneurship from "./components/Entrepreneurship";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <NewsSection />
         <TabSection />
       </div> */}
-      <Facilities />
+      {/* <Facilities /> */}
+      <Entrepreneurship />
+
 
     </>
   );
