@@ -505,6 +505,26 @@ body {
   height: 1px;
 }
 
+.button {
+  padding: 13px 23px;
+  font-size: 17px;
+  background-color: #ffbf49;
+  color: #003e70;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ffaa00; /* Hover color */
+}
+
+.entreButton{
+  margin-top: 20px;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
   .app {
@@ -570,6 +590,16 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .paragraph {
+    font-size: 1.2rem;
+  }
+  .bold {
+    font-size: 1rem;
+  }
+}
+
+
 
 @keyframes autoScroll {
   0% {
@@ -593,13 +623,36 @@ body {
   background: #b0b0b0;
 }
 
+@keyframes move {
+  0% {
+    top: 0px; 
+  }
+  20% {
+    top: -50px; 
+  }
+  40% {
+    top: -100px; 
+  }
+  60% {
+    top: -150px; 
+  }
+  80% {
+    top: -200px;
+  }
+  100% {
+    top: -250px; 
+  }
+}
+
+span {
+  animation-name: move 1s ease-in-out;
+}
+
 @media (min-width: 1024px) {
   .dashboard-grid-container {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
   }
-
-
 }
 
 @media (max-width: 1024px) {
