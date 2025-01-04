@@ -7,6 +7,7 @@ import NewsSection from "./components/NewsSection";
 import TabSection from "./components/TabSection";
 import Facilities from "./components/Facilities";
 import Entrepreneurship from "./components/Entrepreneurship";
+import GrievancesPage from "./components/GrievancesPage";
 
 function App() {
   return (
@@ -17,10 +18,9 @@ function App() {
         <NewsSection />
         <TabSection />
       </div> */}
-      {/* <Facilities /> */}
-      <Entrepreneurship />
-
-
+     {/* <Facilities />  */}
+     <Entrepreneurship />
+        {/* <GrievancesPage /> */}
     </>
   );
 }

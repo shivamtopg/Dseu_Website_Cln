@@ -125,7 +125,7 @@ const Entrepreneurship = () => {
               style={{
                 height: "100%",
                 width: "100%",
-                borderRadius: "4px",
+                borderRadius: "10px",
               }}
             />
           </div>
@@ -227,7 +227,7 @@ const Entrepreneurship = () => {
                     style={{
                       height: "100%",
                       width: "100%",
-                      borderRadius: "4px",
+                      borderRadius: "8px",
                     }}
                   />
                 </div>

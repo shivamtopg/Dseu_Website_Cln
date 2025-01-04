@@ -51,7 +51,7 @@ const EntrepreneurshipEvents = () => {
           gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
           gap: "20px",
           justifyContent: "center",
-          alignItems: "stretch",
+          alignItems: "stretch", // Ensures all grid items have the same height
           maxWidth: "1000px",
           margin: "0 auto",
         }}
@@ -64,28 +64,40 @@ const EntrepreneurshipEvents = () => {
               padding: "20px",
               borderRadius: "8px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              display: "flex",
-              alignItems: "center",
+              display: "flex", // Flexbox for side-by-side layout
+              alignItems: "center", // Align items vertically
               gap: "20px",
-              minHeight: "120px",
+              minHeight: "150px", // Set consistent height
               color: "#003e70",
             }}
           >
+            {/* Image Container */}
             <div
               style={{
+                flexShrink: 0, // Prevent shrinking
                 height: "150px",
-                width: "350px",
+                width: "150px",
                 backgroundColor: "#dcdcdc",
-                borderRadius: "4px",
+                borderRadius: "8px",
+                overflow: "hidden", // Ensures no overflow from image
               }}
-            ><img src= {DSEU} alt="" 
-            style={{
-              height: "100%",
-              width: "100%",borderRadius: "4px" }}/></div>
-            <div style={{ textAlign: "left" }}>
+            >
+              <img
+                src={DSEU}
+                alt=""
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  objectFit: "cover", // Maintain image proportions
+                }}
+              />
+            </div>
+
+            {/* Text Container */}
+            <div style={{ flex: 1, textAlign: "left" }}>
               <h3
                 style={{
-                  fontSize: "1.5em",
+                  fontSize: "1.4em",
                   fontWeight: "bold",
                   margin: "0 0 10px 0",
                 }}
@@ -93,7 +105,11 @@ const EntrepreneurshipEvents = () => {
                 {event.title}
               </h3>
               <p
-                style={{ fontSize: "0.95em", margin: "0", fontWeight: "bold" }}
+                style={{
+                  fontSize: "0.9em",
+                  margin: "0",
+                  fontWeight: "bold",
+                }}
               >
                 {event.description}
               </p>
@@ -101,11 +117,8 @@ const EntrepreneurshipEvents = () => {
           </div>
         ))}
       </div>
-      <button
-        className="button entreButton"
-      >
-        Know More
-      </button>
+
+      <button className="button entreButton">Know More</button>
     </div>
   );
 };
