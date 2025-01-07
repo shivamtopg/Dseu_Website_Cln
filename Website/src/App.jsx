@@ -8,19 +8,21 @@ import TabSection from "./components/TabSection";
 import Facilities from "./components/Facilities";
 import Entrepreneurship from "./components/Entrepreneurship";
 import GrievancesPage from "./components/GrievancesPage";
+import AlumniSection from "./components/AlumniSection";
 
 function App() {
   return (
     <>
-      {/* <Card />
-      <About />
-      <div className="app">
+     {/* <Card /> */}
+      {/* <About /> */}
+      {/* <div className="app">
         <NewsSection />
         <TabSection />
-      </div> */}
+      </div>  */}
      {/* <Facilities />  */}
-     <Entrepreneurship />
+     {/* <Entrepreneurship /> */}
         {/* <GrievancesPage /> */}
+        <AlumniSection />
     </>
   );
 }

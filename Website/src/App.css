@@ -599,6 +599,15 @@ body {
   }
 }
 
+.arrow{
+  margin: 5px;
+  color: white;
+  opacity: 0.9;
+}
+
+.arrow:hover{
+  opacity: 1;
+}
 
 
 @keyframes autoScroll {
