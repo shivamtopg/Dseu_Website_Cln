@@ -1,5 +1,6 @@
 import React from "react";
-import DSEUImage from "../assets/DSEU.png"; // Replace with the path to your image
+import DSEUImage from "../assets/DSEU.png"; 
+import DSEUFooter from "../assets/AlumniFooter.png"; 
 
 const DSEUSection = () => {
   const styles = {
@@ -111,7 +112,7 @@ const DSEUSection = () => {
 
       {/* Image */}
       <div style={styles.imageContainer}>
-        <img src={DSEUImage} alt="DSEU Campus" style={styles.image} />
+        <img src={DSEUFooter} alt="DSEU Campus" style={styles.image} />
       </div>
     </section>
   );

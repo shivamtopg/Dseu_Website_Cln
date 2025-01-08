@@ -15,7 +15,7 @@ const TopStories = () => {
         </div>
         <div style={styles.featuredCard}>
           <div style={styles.featuredContent}>
-            <h3 style={styles.featuredText}>Alumni Magazine <br /> January 2025 <a href="/"><i class="fa-solid fa-up-right-from-square arrow"></i></a> </h3>
+            <h3 style={styles.featuredText}>Alumni Magazine <br /> January 2025 <a href="/"><i style = { styles.arrow} class="fa-solid fa-up-right-from-square arrow"></i></a> </h3>
           </div>
         </div>
       </div>
@@ -94,6 +94,10 @@ const styles = {
     cursor: "pointer",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   },
+  arrow: {
+    margin: '5px',
+    color:' white',
+  }
 };
 
 export default TopStories;
