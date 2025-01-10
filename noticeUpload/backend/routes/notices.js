@@ -65,16 +65,5 @@ router.delete("/delete/:id", authenticateAdmin, async (req, res) => {
     res.status(500).json({ message: "Error deleting notice", error });
   }
 });
-router.put("/update/:id", authenticateAdmin, async (req, res) => {
-  try {
-    const { id } = req.params;
-    await Notice.findByIdAndUpdate(id, {
-      archived: false,
-    });
-    res.json({ message: "Notice updated" });
-  } catch (error) {
-    res.status(500).json({ message: "Error updating notice", error });
-  }
-});
 
 module.exports = router;
